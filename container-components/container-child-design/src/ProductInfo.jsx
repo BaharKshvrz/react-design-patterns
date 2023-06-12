@@ -1,16 +1,21 @@
 import React from 'react'  
 
 function ProductInfo({ product }) {
-  const { name, price, decription, rating } = product;
+  if (!product) return;
+  const { name, price, description, rating } = product;
  
-  return (
-    <>
-       <h3>{name}</h3>
-       <p>{price}</p>
-       <h3>Decription:</h3>
-       <p>{decription}</p>
-       <p>Average Rating: {rating} </p>
-    </>
+  return ( 
+     <>
+       { product ? <>
+                    <h3>{name}</h3>
+                    <p>{price}</p>
+                    <h3>Decription:</h3>
+                    <p>{description}</p>
+                    <p>Average Rating: {rating}</p>
+                   </> 
+                : ''
+      }
+      </>
   )
 }
 

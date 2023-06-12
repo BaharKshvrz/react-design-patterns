@@ -1,4 +1,4 @@
-# Applying the layout component
+# Applying the Component-Child Pattern
 
-Instead of sending components via props, send them through the children.
-
+Data is prepared in Parent Component and send to child.
+The child component just shows the view.

@@ -3,17 +3,18 @@ import  { useEffect, useState } from 'react'
 
 const UserLoader = (props) => {
    const [user, setUser] = useState(null);  
+   const {userId, renderItem} = props;
   
    useEffect(() => {
      ( async () => {
-            const response = await axios.get('/users/1');
+            const response = await axios.get(`/users/${userId}`);
             setUser(response.data);
         }
      )();
-  }, [setUser]);
+  }, [userId]);
   
 
-  return props.render(user)
+  return renderItem(user)
 }
 
 export default UserLoader
