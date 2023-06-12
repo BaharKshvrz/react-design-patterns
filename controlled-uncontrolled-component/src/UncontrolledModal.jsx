@@ -22,11 +22,16 @@ const UncontrolledModal = ({children}) => {
   const [ shouldShowModal, setShouldShowModal ] = useState(false);  
   return (
         <>
-           <button onClick={() => setShouldShowModal(!shouldShowModal)}>Show Modal Uncontrolled</button>
-           { shouldShowModal && <ModalBackground onClick={() => setShouldShowModal(false)}>
-               <ModalBody onClick={ e => e.stopPropagation()}>
-                 <button onClick={() => setShouldShowModal(false)}>close</button>
-                 <br/>
+           <button onClick={() => setShouldShowModal(!shouldShowModal)}>
+               Show Modal Uncontrolled
+            </button>
+           { shouldShowModal && <ModalBackground 
+                   onClick={() => setShouldShowModal(false)}>
+                   <ModalBody onClick={ e => e.stopPropagation()}>
+                    <button onClick={() => setShouldShowModal(false)}>
+                        close
+                    </button>
+                    <br/>
                  {children}
                </ModalBody>
                </ModalBackground>
