@@ -69,6 +69,26 @@ app.get('/products/:id', (req, res) => {
   res.json(products.find(product => product.id === id));
 });
 
+// POST /users route to create a new user
+app.post('/users/:id', (req, res) => {
+  const { name, age, hairColor, id } = req.body.user;
+
+  // Find the user with the given ID
+  const userToUpdate = users.find(user => user.id === id);
+
+  if (!userToUpdate) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+
+  // Update the user's name and email
+  userToUpdate.name = name;
+  userToUpdate.age = age;
+  userToUpdate.hairColor = hairColor;
+
+  res.json(userToUpdate);
+});
+
+
 
 // Start the server
 app.listen(8080, () => {
