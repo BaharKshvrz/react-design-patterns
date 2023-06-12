@@ -1,8 +1,8 @@
 import React from 'react'
-import { useUser } from './useUser';
+import { useResource } from './useResource';
 
-function UserInfo() {
-   const user = useUser();
+function UserInfo({userId}) {
+   const user = useResource(`/users/${userId}`);
    const { name, age, hairColor, hobbies } = user || {};
  
    return (
