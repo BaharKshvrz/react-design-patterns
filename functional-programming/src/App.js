@@ -1,4 +1,6 @@
 import RecursiveComponent from "./RecursiveComponent";
+import { BigSuccessButton, DangerButton } from "./composition-with-props";
+import { BigSuccessButtonWithPartially, DangerButtonWithPartially } from "./partiallyApply";
 
 const nestedData  = {
   a: 1,
@@ -27,6 +29,12 @@ function App() {
     <div className="App">
       { nestedData && <ul><RecursiveComponent data={nestedData}/></ul>
       }
+
+      <DangerButton text="Don't do it!"/>
+      <BigSuccessButton text="I'm huge" />
+       <hr/>
+      <DangerButtonWithPartially text="Don't do it! using parially!"/>
+      <BigSuccessButtonWithPartially text="I'm huge using parially!" />
     </div>
   );
 }

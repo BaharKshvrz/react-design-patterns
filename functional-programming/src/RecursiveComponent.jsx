@@ -10,7 +10,6 @@ const RecursiveComponent = ({data}) => {
    }
  
    const pairs = Object.entries(data);
-   
    return (
        <>
         { pairs.map(([key, value]) => (
