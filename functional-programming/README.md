@@ -1,4 +1,3 @@
-# Applying the layout component
+# Applying the Functional Programming
 
-Instead of sending components via props, send them through the children.
-
+Using the compositon with props and HOC.
