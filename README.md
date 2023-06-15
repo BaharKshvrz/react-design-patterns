@@ -13,18 +13,18 @@ Working with forms
 Incorporating functional concepts into our code
 
 
-# React Design Patterns he mentioned:
+# React Design Patterns that mentioned:
 
-Layout component
+- Layout component
 <br/>
-Container component
+- Container component
 <br/>
-Controlled and uncontrolled component
+- Controlled and uncontrolled component
 <br/>
-High-Order Component
+- High-Order Component
 <br/>
-Custom hooks
+- Custom hooks
 <br/>
-Functional Programming
+- Functional Programming
 <br/>
-Compound Component
+- Compound Component
