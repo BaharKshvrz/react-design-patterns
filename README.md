@@ -14,7 +14,7 @@ Incorporating functional concepts into our code
 
 
 # React Design Patterns that mentioned:
-
+<br/>
 - Layout component
 <br/>
 - Container component
